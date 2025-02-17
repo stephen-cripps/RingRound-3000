@@ -9,8 +9,7 @@
 
 import csv
 import json
-from selenium import webdriver
-
+import UiAutomator
 
 def read_csv():
   people = []
@@ -37,8 +36,4 @@ class person:
 people = read_csv()
 credentials = read_credentials()
 
-# create object
-edgeBrowser = webdriver.Edge(r"./msedgedriver.exe")
-
-# open browser and navigate to lambdatest Login Page
-edgeBrowser.get('https://www.lambdatest.com')
+UiAutomator.open_and_login(credentials['username'], credentials['password'])
