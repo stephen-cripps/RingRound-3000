@@ -15,8 +15,9 @@
       "name": "Python Debugger: Ringround3000.py",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/Ringround3000.py",
-      "console": "integratedTerminal"
+      "program": "${workspaceFolder}/ring_round_3000.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

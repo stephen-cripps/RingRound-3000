@@ -1,2 +1,12 @@
-Name, Answered, Notes
-Stephen Cripps, Yes, Python Test
+Name,Answered?,"If yes: 
+Meaningful interaction?",Notes - include which action eg
+Stephen Cripps,Yes,Yes,"Can be easily coerced with food"
+Sophie Wareham,Yes,No,
+Lara Vaughan,No,,
+Elizabeth Clay,No,,
+Emily Marsden,No,,
+Megan O'Neill,Yes,Yes,
+Iona Roberts,No,,
+Edan Morris,Yes,Yes,
+Anna Smith,No,,
+Zoe Rabbani,Yes,Yes,
