@@ -8,7 +8,8 @@ def read_csv():
     reader = csv.reader(f)
     next(reader)
     for row in reader:
-      people.append(person(row[0], row[1], row[2], row[3]))
+      if(row[1]):
+        people.append(person(row[0], row[1], row[2], row[3]))
   return people
 
 
@@ -35,11 +36,12 @@ class person:
 
 if __name__ == "__main__":
     people = read_csv()
-    credentials = read_credentials()
     ring_round_date = "29-Mar-2025"
 
+    credentials = read_credentials()
     automator = ui_automator.ui_automator()
     automator.open_and_login(credentials['username'], credentials['password'])
+
 
     for p in people:
         try:

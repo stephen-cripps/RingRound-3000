@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 class ui_automator:
     def __init__(self, browser=None):
@@ -42,6 +43,9 @@ class ui_automator:
 
         # get the input box child of the form
         search_box_input = search_box.find_element(By.TAG_NAME, "input")
+
+        search_box_input.send_keys(Keys.CONTROL + "a")  # Select all text
+        search_box_input.send_keys(Keys.BACKSPACE)   
         search_box_input.send_keys(person.name)
 
         search_box_suggestions = WebDriverWait(search_box, 10).until(
@@ -91,6 +95,10 @@ class ui_automator:
         )
 
         self.browser.execute_script("arguments[0].click();", save_button)
+
+        WebDriverWait(self.browser, 10).until(
+            lambda d: d.find_element(By.XPATH, "//time[text()='less than a minute ago']")
+        )
 
         print(f"Updated {person.name}")
 
