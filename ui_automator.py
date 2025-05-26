@@ -12,6 +12,7 @@ class ui_automator:
         else:
             options = webdriver.ChromeOptions()
             options.add_argument("--start-maximized")
+            # ToDo - Auto update this
             service = Service(executable_path="./chromedriver-win64/chromedriver.exe")
             self.browser = webdriver.Chrome(service=service, options=options)
 

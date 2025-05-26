@@ -4,7 +4,7 @@ import ui_automator
 
 def read_csv():
   people = []
-  with open('test.csv', 'r') as f:
+  with open('list.csv', 'r') as f:
     reader = csv.reader(f)
     next(reader)
     for row in reader:
@@ -36,7 +36,7 @@ class person:
 
 if __name__ == "__main__":
     people = read_csv()
-    ring_round_date = "29-Mar-2025"
+    ring_round_date = "15-Apr-2025"
 
     credentials = read_credentials()
     automator = ui_automator.ui_automator()
