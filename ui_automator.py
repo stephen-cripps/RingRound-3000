@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver     
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -13,7 +14,7 @@ class ui_automator:
             options = webdriver.ChromeOptions()
             options.add_argument("--start-maximized")
             # ToDo - Auto update this
-            service = Service(executable_path="./chromedriver-win64/chromedriver.exe")
+            service = Service(ChromeDriverManager().install())
             self.browser = webdriver.Chrome(service=service, options=options)
 
     def open_and_login(self, username, password):
