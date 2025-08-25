@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
 
     people = read_csv()
-    ring_round_date = "24-May-2025"
+    ring_round_date = "16-Jul-2025"
     for p in people:
         try:
             automator.update_person(p, ring_round_date)
